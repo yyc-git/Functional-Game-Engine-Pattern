@@ -12,6 +12,7 @@
 - fp
 - reason(only for example code knowledge, not whole knowledge!)
 - webgl
+
 references
 (e.g.
 https://reasonml.github.io/docs/en/quickstart-javascript.html
@@ -21,6 +22,7 @@ https://reasonml.github.io/docs/en/quickstart-javascript.html
 3.函数式编程相关模式
 
 - 函数是第一公民
+
 high order function
 
 no variable, use function to get variable
@@ -28,11 +30,13 @@ no variable, use function to get variable
 - 组合
 
 - 柯西化
+
 application:
 unity function interface( by curry different param)
 cache data(e.g. glsl draw, location...)
 
 - 递归
+
 尾递归优化
 
 application:
@@ -40,12 +44,14 @@ editor->scene tree recurive instead of mutable operation
 
 
 - 模式匹配
+
 switch
 
 
 
 - 不可变数据
     - state
+    
 use record as state
 immutable state
 mutable state data for optimize
@@ -62,6 +68,7 @@ redo_undo(immutable, mutable(copy))
 
 
 - cps(remove ???)
+
 https://www.ibm.com/developerworks/cn/java/j-contin.html
 
 
@@ -92,6 +99,7 @@ job
 
 
 - 管道数据
+
 extract pipeline data to json
 
 
@@ -123,6 +131,7 @@ converter
 5.稳定性相关模式
 
 - 回退
+
 need detect environment
 
 application:
@@ -169,6 +178,7 @@ integration with ci
 
 
 - 流
+
 frp
 
 
@@ -180,6 +190,7 @@ load asset
 
 
 - 多线程
+
 worker: frp + job + data driven
 
 
@@ -216,6 +227,7 @@ collider,
 
 
 - hot
+
 hot change
 
 hot load
@@ -245,6 +257,7 @@ hot load
 
 
 - glsl module
+
 glsl compiler:
 support import glsl
 
@@ -254,6 +267,7 @@ support import glsl
 
 
 - 综合应用
+
 package size
 build different package
 
@@ -317,10 +331,12 @@ use int for gameObject,component instead of object
 11.优化相关模式
 
 - mutable operation
+
 cache
 share data(refer to state)
 
 - texture cache
+
 use texture for cache pre-computed data
 
 
@@ -370,6 +386,7 @@ more?
 
 
 - 多次剔除(这个名字不好，需要修改！)
+
 先使用计算量小的方法来剔除大量数据，再使用计算量大的方法来剔除剩余数据
 
 
@@ -468,6 +485,7 @@ shadow map
 13.其他所有模式
 
 - clone
+
 share material/geometry
 
 
@@ -476,6 +494,7 @@ share material/geometry
 
 
 - procedural(remove???)
+
 procedural texture 
 
 
