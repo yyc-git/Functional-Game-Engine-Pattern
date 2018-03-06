@@ -1,63 +1,10 @@
-# 修改
-
-## 把综合应用集中在最后一部分（14.综合应用中）
-
-## 具体的技术不能作为模式
-多线程
-
-render command
-
-multi pass
-
-procedural
-
-删除render相关模式(render为具体的技术)
+一、基础知识
 
 
+1. 介绍
 
-## 提炼更多的模式
-
-从我实现过的3d功能中，提炼模式:
-分析每个功能中的模式
-合并类似/相同的模式的功能为同一个模式的案例
-
-
-
-可以从《real time rendering》 中提取模式
-
-
-
-提炼游戏引擎中与函数式编程相关的模式
-
-
-
-
-
-## 精简模式和案例
-只保留与游戏引擎相关的(在扩展部分 最多推广到编辑器)
-
-
-## 提炼出 思想，单独一个模块（若干章节，或者单个章节？)介绍
-
-思想:
-
-- 数据、逻辑分离？
-- 数据流
-- 管道处理(pipeline)
-- 允许mutable
-- 组合
-
-
-此为原则？
-- 禁止外部变量
-
-
-
-# 目录内容
-
-
-1.介绍
-
+介绍本书使用的模式推导思路
+介绍《元素模式》中的思想和方法
 
 函数式编程 与 面向对象编程 比较:
 思维层面
@@ -77,19 +24,20 @@ procedural
 
 
 
+/*
 本书定位层面：
 (参考《我的架构思想》->序1)
 聚焦在l1,l2，用l0应用
 
 即聚焦在科学方法(模式)(l1)和方法论(原则)(l2);
 然后给出案例，展示在实践(l0）中的应用
+*/
 
 
 
 
 
-函数式编程思想分析：
-
+函数式编程思想分析(简单说下就行了)：
 
 定义函数:
     输入数据＋逻辑＋输出数据
@@ -145,7 +93,7 @@ procedural
 
 
 
-给出游戏引擎的等式:
+////给出游戏引擎的等式:
 
 游戏引擎 = 主循环 + job + service + pipeline?(再抽象一点？)
 
@@ -158,18 +106,39 @@ procedural
 
 
 
-预测游戏引擎的发展趋势：
+////预测游戏引擎的发展趋势：
 函数式编程是一个可行的方向！
 
 
 
 
 
-2.基础知识
+2. 本书名词定义
 
-- fp
-- reason(only for example code knowledge, not whole knowledge!)
-- webgl
+
+
+
+
+3. 思想
+
+提炼出模式之上的思想
+
+
+数据、逻辑分离
+数据流
+管道处理(pipeline)
+允许mutable
+组合
+
+
+
+
+
+
+
+4. fp基础
+5. reason(only for example code knowledge, not whole knowledge!)基础
+6. webgl基础
 
 references
 (e.g.
@@ -178,11 +147,72 @@ https://reasonml.github.io/docs/en/quickstart-javascript.html
 
 
 
-3. 思想(原则？)
 
 
 
-3.函数式编程相关模式
+二、基本模式
+
+1. 提炼元素、设计空间
+
+(只有具体实现，没有案例?)(没有模式变体???)
+
+根据 对象相似度、对象类型相似度、方法相似度 来定义函数式编程中的EDP?
+(这里 对象=module? 对象类型 = module 类型? 方法 = 函数?)
+
+考虑module functor？
+
+
+
+函数式编程的实体/元素：
+数据 函数 模块 类型
+(remove模块?)
+
+游戏引擎相关的实体/元素：
+时间 空间(////硬件)(CPU/GPU, 内存)(remove?) 
+
+(可以给出 推出 这些元素 的思维过程. e.g. 先列出游戏引擎相关的实体概念，然后从中提炼出 时间、空间 元素)
+
+
+
+
+依赖关系:
+?
+
+
+遍历每个依赖关系，在设计空间中识别出 本书需要用到的EDP
+
+
+
+EDP = 实体 + 关系???
+
+EDP(more!):
+核心EDP(需要从实体之间的关系来推导):
+提出"组合"EDP(对应"继承"EDP)?
+or 提出"functor"EDP?(对应"继承"EDP)?
+"Signature"EDP对应"抽象接口"EDP?
+
+
+先看“函数调用”:
+
+////分析 函数 与 模块 的相似度(不考虑 模块 类型?)
+分析 函数 与 模块 与 模块 类型 的相似度
+
+
+得出 "组合","递归","委托","内聚"等EDP?
+
+////函数(未知)-模块(未知)
+
+
+
+
+2. 推导EDP
+
+EDP要分类
+(参考 对象元素、类型关系、方法调用 三大类)
+
+
+
+推出与下面类似的EDP?
 
 - 函数是第一公民
 
@@ -224,7 +254,7 @@ redo_undo(immutable, mutable(copy))
 管道处理
 
 
-- 数据结构哦
+- 数据结构
 
 tuple
 record
@@ -250,13 +280,31 @@ https://www.ibm.com/developerworks/cn/java/j-contin.html
 - module functor
 
 
-- 综合应用
 
 
 
 
 
 
+
+
+三、一级模式
+
+使用EDP来描述该模式
+
+
+(只有具体实现，没有案例?)(没有或有很少的模式变体)
+
+四、二级模式
+
+使用EDP+一级模式来描述该模式
+
+引擎中的EDP模式
+(这个才有案例!!!???)(有多个模式变体及在引擎中的相关案例!!!)
+
+
+
+## 推出下面类似的模式?
 
 4.数据驱动相关模式
 
@@ -285,14 +333,8 @@ refer to function->compose
 
 
 
-- scene graph(需要提炼模式)
-
-converter
-
-.wd, .gltf
 
 
-- 综合应用
 
 
 
@@ -336,7 +378,7 @@ integration with ci
 
 
 
-- 综合应用
+
 
 
 
@@ -362,30 +404,6 @@ load asset
 
 
 
-- 多线程
-
-////worker: frp + job + data driven
-(only use worker)
-
-
-example:
-multi thread render
-
-multi thread logic:
-collider,
-...
-
-
-
-
-- 综合应用
-
-    - 基于frp的多线程
-
-
-
-
-
 
 
 7.调试相关模式
@@ -397,7 +415,7 @@ collider,
 
 - 日志分级
 
-- 根据线上state json 恢复出错现场
+- 根据线上state json 恢复出错现场(提出模式)
 
 
 - hot
@@ -418,7 +436,7 @@ hot update asset(游戏中热更新美术资源?)
 
 
 
-- 综合应用
+
 
 
 
@@ -447,7 +465,7 @@ support import glsl
 
 
 
-- 综合应用
+
 
 package size
 build different package
@@ -718,29 +736,12 @@ typearray pool
 buffer pool
 
 
-- 综合应用
+
 
 
 
 
 - tiled(提炼更抽象的模式？)
-
-
-
-12.渲染相关模式
-
-
-- render command
-
-
-- multi pass
-
-
-example:
-post processing
-defer shading
-shadow map
-
 
 
 
@@ -791,14 +792,6 @@ skeleton animation->compute position(multiply parent matrix)
 
 
 
-- procedural(remove???提取出模式？)
-
-procedural texture
-
-
-voxel(remove from here?提取出模式？)
-voxel terrain
-voxel+polygon texture
 
 
 
@@ -810,41 +803,102 @@ voxel+polygon texture
 
 
 
-- 综合应用
+## 参考下面类似的案例
+
+- scene graph(需要提炼模式)
+
+converter
+
+.wd, .gltf
+
+
+
+- 多线程
+
+////worker: frp + job + data driven
+(only use worker)
+
+
+example:
+multi thread render
+
+multi thread logic:
+collider,
+...
 
 
 
 
 
-14.综合模式(remove?)
 
-定义：
-组合应用多个单个模式的模式
+    - 基于frp的多线程
 
 
+- procedural(remove???提取出模式？)
+
+procedural texture
+
+
+voxel(remove from here?提取出模式？)
+voxel terrain
+voxel+polygon texture
+
+
+
+12.渲染相关模式
+
+
+- render command
+
+
+- multi pass
+
+
+example:
+post processing
+defer shading
+shadow map
 
 
 
 
 
 
-14.综合应用
+
+
+
+
+
+
+
+
+
+
+五、三级模式
+
+使用EDP+一级模式+二级模式来描述该模式
+
+引擎中综合应用的模式
+e.g. data driven render pipeline, frp+job的多线程, ...
+
+
+推出下面类似的模式?
+
 在引擎实际的架构设计中，应用多个引擎模式(二级模式)，展示模式应用场景的全貌
 
-- wonder.js架构原型
-    - data driven+decouple(service, job, ...)+optimize(data oriented)
-    - job架构实现
+- data driven+decouple(service, job, ...)+optimize(data oriented)
+- job架构实现
 
 job + extend(custom job) + data driven
-    - 基于data driven + frp 的多线程
-    - data driven render:
-    
+- 基于data driven + frp 的多线程
+- data driven render:
+
 custom pipeline for pc, mobile, pbr, ...
-    - more...
+- more...
     
-    
-    
-15. 附录
+
+
+
+六、 附录
 所有模式的PIN箱图
 所有模式的p演算(remove?)
-

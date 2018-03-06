@@ -1,3 +1,14 @@
+## 参考
+《元素模式》
+《重构：改善既有代码的设计》
+《重构到模式》
+《设计模式之禅》
+
+
+## 篇幅控制
+
+- 只列出与游戏引擎相关的主要模式，不试图推出游戏引擎或函数式编程中所有的模式
+
 
 ## record
 
@@ -25,18 +36,6 @@ not give implement detail about engine feature(defer shading, animation, ...)
 
 
 
-## who are reader
-
-web or native developer(especially for web)
-
-engine developer
-
-game developer
-
-architect
-
-functional programming fans
-
 ## write-book references
 thegibook:
 http://www.thegibook.com/
@@ -50,46 +49,3 @@ https://book.douban.com/subject/26880704/
 
 关于引擎的书:
 https://zhuanlan.zhihu.com/p/33724015
-
-
-
-## 组织方式
-refer to http://gameprogrammingpatterns.com/bytecode.html
-
-正模式
-
-反模式
-
-实例
-
-...
-
-
-## strategy
-
-no too much code detail, only give example code
-
-each pattern is independent!
-
-
-### for each pattern
-
-
-
-give each example for each pattern(
-////can run online
-store in github
-
-伪代码(reason版本）
-
-remain simple!(simple reason code)
-
-be correct!(verfied in wonder.js in production)
-)
-
-
-
-
-give see also(more references)
-
-专门回答用户的疑问(众筹)/典型的疑问
