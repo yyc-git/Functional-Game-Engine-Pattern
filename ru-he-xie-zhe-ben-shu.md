@@ -4,6 +4,23 @@
 《重构到模式》
 《设计模式之禅》
 
+http://icodeit.org/2015/08/how-to-write-a-book/
+
+## 画图
+http://icodeit.org/2012/01/%E4%BD%BF%E7%94%A8graphviz%E7%BB%98%E5%88%B6%E6%B5%81%E7%A8%8B%E5%9B%BE/
+
+
+## 印书
+
+https://www.douban.com/group/topic/30871319/
+
+https://www.zhihu.com/question/20558314
+
+可以加上签名和祝福语
+
+
+https://www.zhihu.com/question/28963851
+
 
 ## 篇幅控制
 

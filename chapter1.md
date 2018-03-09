@@ -1,3 +1,5 @@
+# 目录内容
+
 一、基础知识
 
 
@@ -134,6 +136,7 @@ https://reasonml.github.io/docs/en/quickstart-javascript.html
 函数式编程的实体/元素：
 数据 函数 模块 类型
 (remove模块?)
+(remove类型?)
 
 游戏引擎相关的实体/元素：
 时间 空间(////硬件)(CPU/GPU, 内存)(remove?) 
@@ -463,81 +466,7 @@ compare es6 module, cmd/amd, namespace
 
 - job
 
-- microservice
-
-https://martinfowler.com/articles/microservices.html#DecentralizedDataManagement
-https://www.jianshu.com/p/39c1e4ec0d63
-
-
-
-service->logic, data 分离
-
-multi layer service
-
-
-面向数据来切分服务
-
-各个service相互独立，只操作自己的数据
-
-each service logic should not duplicate
-
-
-
-提出问题，给出答案
-
-
-结合案例，采用迭代的方式来展现模式的演化，展示是如何一步步完善模式的！
-
-
-
-为了解决各个service之间需要相互调用的情况(如gameObject包含了component，因此gameObject服务需要对应操作component服务), 提出个模块(取名为Combiner?Linker?Connector?ServiceMesh?)(叫composite service比较好，因为该模块就是负责组合多个service为一个大的service)来负责组合多个service的通用逻辑，但不属于service，应该属于service调用者所在的模块
-调用者可依赖该模块，也可以直接调用service(相当于utils)
-(e.g. GameObject->处理component的data的逻辑放在这里,而GameObjectJobService只负责处理gameObjectData)
-
-////传入整个state到该模块？
-把需要的各个service data传入？
-
-
-
-为了解决“调用者不需要知道state中各个service data存在”的问题，提出facade层，即：
-调用者->facade->service
-
-把该逻辑放到facade中(参考编辑器)
-
-
-如果调用者调用facade，会降低一些性能（
-可能会增加拼装state的次数
-）
-
-
-
-
-为了解决service中重复代码，以及通用程度不同的问题，采用service分层
-
-
-
-
-compare with:
-component(ecs)
-layer(editor)
-
-
-
-好处：
-service互不影响
-
-显示定义定义了service api，明确了服务的概念:
-Another consequence of using services as components is a more explicit component interface. Most languages do not have a good mechanism for defining an explicit Published Interface. Often it's only documentation and discipline that prevents clients breaking a component's encapsulation, leading to overly-tight coupling between components. Services make it easier to avoid this by using explicit remote call mechanisms.
-
-数据相互独立(不再依赖整个state)
-
-
-
-这些好处都要结合案例来说明！
-
-
-缺点：
-Moving code is difficult across service boundaries, any interface changes need to be coordinated between participants, layers of backwards compatibility need to be added, and testing is made more complicated.
+- 微服务
 
 
 
