@@ -6,6 +6,22 @@
 
 http://icodeit.org/2015/08/how-to-write-a-book/
 
+
+thegibook:
+http://www.thegibook.com/
+https://zhongchou.modian.com/item/9055.html
+
+gameprogramingpatterns:
+http://gameprogrammingpatterns.com/
+https://zhuanlan.zhihu.com/p/23821422
+https://book.douban.com/subject/26880704/
+
+
+关于引擎的书:
+https://zhuanlan.zhihu.com/p/33724015
+
+
+
 ## 画图
 http://icodeit.org/2012/01/%E4%BD%BF%E7%94%A8graphviz%E7%BB%98%E5%88%B6%E6%B5%81%E7%A8%8B%E5%9B%BE/
 
@@ -52,17 +68,3 @@ not give implement detail about engine feature(defer shading, animation, ...)
 关于同一种模式,给出多种方案，比较不同的方案
 
 
-
-## write-book references
-thegibook:
-http://www.thegibook.com/
-https://zhongchou.modian.com/item/9055.html
-
-gameprogramingpatterns:
-http://gameprogrammingpatterns.com/
-https://zhuanlan.zhihu.com/p/23821422
-https://book.douban.com/subject/26880704/
-
-
-关于引擎的书:
-https://zhuanlan.zhihu.com/p/33724015
