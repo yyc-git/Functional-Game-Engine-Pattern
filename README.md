@@ -2,10 +2,18 @@
 
 《游戏引擎-函数式编程模式》
 
+# 当前状态
+
+## 草稿阶段
+
+不建议阅读
 
 # 作者
+
 杨元超
+
 https://github.com/yyc-git
+
 http://www.cnblogs.com/chaogex/
 
 # 交流群
