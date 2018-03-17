@@ -89,7 +89,7 @@ qq群：731632604
 
 
 ## 实用性高
-全部来自[wonder.js](https://github.com/Wonder-Technology/Wonder.js)引擎实战经验
+本书内容从[wonder.js](https://github.com/Wonder-Technology/Wonder.js)引擎,  [wonder-editor](https://github.com/Wonder-Technology/Wonder-Editor)编辑器开发经验中提炼而来。
 
 
 # 技术背景
